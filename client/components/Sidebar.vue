@@ -62,16 +62,16 @@
           add:    function(c) { list.add   (c); return this; },
           remove: function(c) { list.remove(c); return this; }
         }
-        // let results = []
-        // for (var i = 0; i < arguments.length; i++) {
-        //   var list = arguments[i].classList;
-        //   results.push({
-        //       add:    function(c) { list.add   (c); return this; },
-        //       remove: function(c) { list.remove(c); return this; }
-        //   })
-        // }
-        // console.log({...results})
-        // return {...results};
+        let results = []
+        for (var i = 0; i < arguments.length; i++) {
+          var list = arguments[i].classList;
+          results.push({
+              add:    function(c) { list.add   (c); return this; },
+              remove: function(c) { list.remove(c); return this; }
+          })
+        }
+        console.log({...results})
+        return {...results};
       }
     }
   }
