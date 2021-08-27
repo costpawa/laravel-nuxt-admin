@@ -3,3 +3,15 @@
 @import "tailwindcss/utilities";
 @import "~/assets/css/fonts.css";
 @import 'vue-material/dist/vue-material.min.css';
+
+@layer components {
+  .menu-links {
+    @apply cursor-pointer flex items-center w-full p-2 rounded-md transition duration-150 my-3
+  }
+  .menu-links:hover, .menu-active {
+    @apply bg-sideBar-900 text-red-500
+  }
+  .menu {
+    @apply ml-2 text-base transition duration-150
+  }
+}
