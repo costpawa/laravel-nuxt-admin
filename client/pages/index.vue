@@ -1,5 +1,5 @@
 <template>
-  <div>xD</div>
+  <div>index</div>
 </template>
 
 <script>

@@ -49,5 +49,11 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+
+  loading: {
+    color: '#F56565',
+    height: '3px',
+    throttle: 0
   }
 }

@@ -5,6 +5,7 @@ module.exports = {
     './pages/**/*.vue',
     './layouts/**/*.vue',
     './store/**/*.js',
+    './plugins/**/*.js',
     './nuxt.config.{js,ts}',
   ],
   darkMode: false, // or 'media' or 'class'
@@ -42,6 +43,7 @@ module.exports = {
         roboto: ['Roboto'],
       },
       spacing: {
+        "05": "0.125rem",
         14: "3.5rem",
         15: "3.75rem",
         44: "11rem",
@@ -57,6 +59,16 @@ module.exports = {
       },
       minWidth: {
         15: "3.75rem"
+      },
+      transitionDuration: {
+        2000: "2000ms"
+      },
+      borderWidth: {
+        1: '1px',
+        3: '3px',
+        5: '5px',
+        6: '6px',
+        7: '7px',
       }
     },
   },
