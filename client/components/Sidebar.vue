@@ -3,38 +3,40 @@
     <div ref="sideBar" class="w-74 min-h-screen bg-sideBar-700 text-sideBar-200 relative overflow-x-hidden sidebar">
       <div ref="sideBarHead" class="w-full h-14 bg-sideBar-900 flex items-center justify-between pl-3 text-sideBar-100 text-lg font-semibold">
         <div ref="logo" class="transition duration-150 overflow-x-hidden">
-          <NuxtLink to="/" class="logo whitespace-no-wrap" style="text-decoration:none;color: #858598 !important;">Laravel Nuxt Admin</NuxtLink>
+          <NuxtLink to="/" exact class="logo whitespace-no-wrap" style="text-decoration:none !important; color: #858598 !important;"
+          onMouseOver="this.style='color: #f56565 !important; text-decoration:none !important;'"
+          onMouseOut="this.style='color: #858598 !important'">Laravel Nuxt Admin</NuxtLink>
         </div>
         <div ref="toggleButton" class="absolute" style="right:16px;">
           <md-icon class="cursor-pointer hover:bg-sideBar-400 rounded-md p-4" style="transition: background-color .15s cubic-bezier(.4,0,.2,1);" v-on:click.native="toggleSideBar()">menu</md-icon>
         </div>
       </div>
       <div class="w-full pl-2 pr-3 mt-3 transition">
-        <NuxtLink to="/" exact class="menu-links" style="text-decoration:none;">
+        <NuxtLink to="/" exact class="menu-links">
           <div>
             <md-icon class="text-xl">dashboard</md-icon>
           </div>
           <div class="menu">Dashboard</div>
         </NuxtLink>
-        <NuxtLink to="/users" class="menu-links" style="text-decoration:none;">
+        <NuxtLink to="/users" class="menu-links">
           <div>
             <md-icon class="text-xl">people</md-icon>
           </div>
           <div class="menu">Users</div>
         </NuxtLink>
-        <NuxtLink to="/clients" class="menu-links" style="text-decoration:none;">
+        <NuxtLink to="/clients" class="menu-links">
           <div>
             <md-icon class="text-xl">badge</md-icon>
           </div>
           <div class="menu">Clients</div>
         </NuxtLink>
-        <NuxtLink to="/projects" class="menu-links" style="text-decoration:none;">
+        <NuxtLink to="/projects" class="menu-links">
           <div>
             <md-icon class="text-xl">description</md-icon>
           </div>
           <div class="menu">Projects</div>
         </NuxtLink>
-        <NuxtLink to="/tasks" class="menu-links" style="text-decoration:none;">
+        <NuxtLink to="/tasks" class="menu-links">
           <div>
             <md-icon class="text-xl">checklist</md-icon>
           </div>
@@ -130,10 +132,13 @@
 </script>
 
 <style scoped>
-  .menu-links, .logo , .sidebar .md-icon {
+  .menu-links {
+    text-decoration: none !important;
+  }
+  .menu-links, .sidebar .md-icon {
     color: #858598 !important;
   }
-  .logo:hover, .menu-links:hover .md-icon {
+  .menu-links:hover .md-icon {
     color: #f56565 !important;
   }
   .menu-links:hover, .nuxt-link-active, .nuxt-link-exact-active, .nuxt-link-active .md-icon, .nuxt-link-exact-active .md-icon {
