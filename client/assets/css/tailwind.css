@@ -17,10 +17,4 @@
   .navbar-links:hover {
     @apply text-sideBar-900
   }
-  .navbar-link-descriptions {
-    @apply absolute hidden
-  }
-  .navbar-links:hover .navbar-link-descriptions {
-    @apply block
-  }
 }
